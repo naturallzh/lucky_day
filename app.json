@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/what_for_lunch/lunch",
     "pages/index/index",
+    "pages/what_for_lunch/lunch",
     "pages/logs/logs"
   ],
   "window": {

@@ -1,0 +1,2 @@
+<view class="display-board" style="filter: {{blurStr}}">{{dataList[idx]}}</view>
+<view class="btn" bindtap="getRes">ROLL一下</view>

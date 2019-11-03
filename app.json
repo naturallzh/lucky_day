@@ -1,14 +1,42 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/what_for_lunch/lunch",
-    "pages/logs/logs"
+    "pages/main_page/front_page",
+    "pages/main_page/tools",
+    "pages/main_page/personal_page",
+    "pages/logs/logs",
+    "pages/tool_pages/lunch",
+    "pages/index_old/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "Another Lucky Day",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "selectedColor": "#FE4F48",
+    "backgroundColor": "#FAFAFA",
+    "list": [
+      {
+        "pagePath": "pages/main_page/front_page",
+        "text": "首页",
+        "iconPath": "images/home_0.png",
+        "selectedIconPath": "images/home_1.png"
+      },
+      {
+        "pagePath": "pages/main_page/tools",
+        "text": "功能",
+        "iconPath": "images/cate_0.png",
+        "selectedIconPath": "images/cate_1.png"
+      },
+      {
+        "pagePath": "pages/main_page/personal_page",
+        "text": "我的",
+        "iconPath": "images/my_0.png",
+        "selectedIconPath": "images/my_1.png"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json"
 }

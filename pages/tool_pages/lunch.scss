@@ -5,11 +5,15 @@ page {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+}
 
 .display-board {
   font-size: 80rpx;
-  margin-bottom: 200rpx; }
+  margin-bottom: 200rpx;
+  width: 100%;
+  text-align: center;
+}
 
 .btn {
   width: 400rpx;
@@ -19,4 +23,5 @@ page {
   text-align: center;
   line-height: 150rpx;
   border-radius: 20rpx;
-  box-shadow: 6rpx 6rpx gray; }
+  box-shadow: 6rpx 6rpx gray;
+}

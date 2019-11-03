@@ -1,0 +1,18 @@
+<view class="wave-container">
+	<view class="upper-block" style="{{upperBgStr}}">
+		<canvas class="wave-block" canvas-id="waveCanvas" disable-scroll="true"
+			bindtouchstart="nothing" bindtouchmove="nothing" bindtouchend="nothing"></canvas>
+	</view>
+	<view class="lower-block"></view>
+</view>
+
+<view class="user-block">
+	<view class="line-1">
+		<image class="pic"src="{{userInfo.avatarUrl}}" />
+		<button class="text" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">通过微信登陆</button>
+		<view class="text" wx:if="{{hasUserInfo}}" bindtap="gotoLogs">{{userInfo.nickName}}</view>
+	</view>
+</view>
+
+<view style="margin-left:36rpx;margin-top:36rpx">这个页面目前还在构建中</view>
+<view style="margin-left:36rpx;margin-top:18rpx">登录了只能看一下log日志（点击ID）</view>

@@ -30,4 +30,9 @@ page {
             font-size: 30rpx;
         }
     }
+    .tool-item-blank {
+        margin-top: 18rpx;
+        flex-shrink: 0;
+        width: 180rpx;
+    }
 }

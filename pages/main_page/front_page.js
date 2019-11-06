@@ -4,6 +4,12 @@ Page({
    * 页面的初始数据
    */
   data: {
+    headerParas: {
+      headerBg: 'white',
+      isMainPage: true,
+      titleText: '美好的一天又开始辣',
+      titleColor: 'black',
+    },
   },
 
 	nothing () {},
@@ -12,7 +18,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.setNavigationBarTitle({title: '菩提本无树',});
   },
 
   /**

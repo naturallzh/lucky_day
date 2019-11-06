@@ -1,6 +1,7 @@
 <view class="tool-list">
 	<view class="tool-item" bindtap="gotoLunch">
-		<image class="pic"/>
-		<view class="text">今天吃什么</view>
-	</view>
+    <image class="pic"/>
+    <view class="text">今天吃什么</view>
+  </view>
+  <view class="tool-item-blank"></view>
 </view>

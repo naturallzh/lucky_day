@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
-  "disableScroll": true
+  "usingComponents": {
+    "header": "/components/header/index"
+  },
+  "navigationStyle": "custom"
 }

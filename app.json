@@ -29,12 +29,6 @@
         "text": "功能",
         "iconPath": "images/cate_0.png",
         "selectedIconPath": "images/cate_1.png"
-      },
-      {
-        "pagePath": "pages/main_page/personal_page",
-        "text": "我的",
-        "iconPath": "images/my_0.png",
-        "selectedIconPath": "images/my_1.png"
       }
     ]
   },

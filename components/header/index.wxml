@@ -1,0 +1,6 @@
+<view class="header-bar" style="height:{{height}}px; background:{{headerParas.headerBg}}">
+  <view class="capsule-block" bindtap="goBack"></view>
+  <view class="title" style="color: {{headerParas.titleColor}}">{{headerParas.titleText}}</view>
+</view>
+
+<view style="height:{{height}}px;"></view>

@@ -1,3 +1,6 @@
+<header headerParas="{{headerParas}}"></header>
+
 <view style="width:678rpx;margin-left:36rpx;height:300rpx;background:lightblue;margin-top:18rpx;border-radius:12rpx;display:flex;align-items:center;justify-content:center" bindtap="gotoLunch"><text>中午吃什么</text></view>
 <view style="width:678rpx;margin-left:36rpx;height:300rpx;background:lightcoral;margin-top:18rpx;border-radius:12rpx"></view>
 <view style="width:678rpx;margin-left:36rpx;height:300rpx;background:gray;margin-top:18rpx;border-radius:12rpx"></view>
+<view style="width:678rpx;margin-left:36rpx;height:300rpx;background:lightcoral;margin-top:18rpx;border-radius:12rpx"></view>

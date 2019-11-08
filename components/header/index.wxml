@@ -1,5 +1,14 @@
 <view class="header-bar" style="height:{{height}}px; background:{{headerParas.headerBg}}">
-  <view class="capsule-block" bindtap="goBack"></view>
+  <view class="capsule-block-0" bindtap="goHome" wx:if="{{buttonStyle==0}}">
+    <image src="../../images/home_0.png" class="icon"/>
+  </view>
+  <view class="capsule-block-1" wx:if="{{buttonStyle==1}}">
+    <image src="../../images/left-arrow.png" class="icon" bindtap="goBack"/>
+    <image src="../../images/home_0.png" class="icon" bindtap="goHome"/>
+  </view>
+  <view class="capsule-block-2" bindtap="goBack" wx:if="{{buttonStyle==2}}">
+    <image src="../../images/left-arrow.png" class="icon"/>
+  </view>
   <view class="title" style="color: {{headerParas.titleColor}}">{{headerParas.titleText}}</view>
 </view>
 

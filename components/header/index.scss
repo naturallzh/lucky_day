@@ -10,17 +10,36 @@
   z-index: 11;
   border-bottom: 2rpx solid #e8e8e8;
   box-sizing: border-box;
-  .capsule-block {
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+  .capsule-block-0, .capsule-block-2 {
     position: absolute;
     left: 10px;
     bottom: 8px;
-    width: 32px;
+    width: 44px;
     height: 32px;
-    text-align: center;
-    line-height: 32px;
     border-radius: 16px;
-    border: 2rpx solid #e8e8e8;
+    border: 1px solid #e8e8e8;
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .capsule-block-1 {
+    position: absolute;
+    left: 10px;
+    bottom: 8px;
+    width: 87px;
+    height: 32px;
+    border-radius: 16px;
+    border: 1px solid #e8e8e8;
+    padding: 0 5px 0 3px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
   }
   .title {
     max-width: 40%;

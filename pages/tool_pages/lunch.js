@@ -6,6 +6,11 @@ Page({
    * 页面的初始数据
    */
   data: {
+    headerParas: {
+      headerBg: 'white',
+      titleText: '中午吃什么',
+      titleColor: 'black',
+    },
     picUrl: app.globalData.picUrl,  // 图片地址
     showMask: false,
     isRequiring: false,

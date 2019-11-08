@@ -7,11 +7,15 @@
     "pages/tool_pages/lunch",
     "pages/index_old/index"
   ],
+  "usingComponents": {
+    "header": "/components/header/index"
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Another Lucky Day",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
   },
   "tabBar": {
     "borderStyle": "white",

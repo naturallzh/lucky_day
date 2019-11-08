@@ -6,9 +6,10 @@ Page({
   data: {
     headerParas: {
       headerBg: 'white',
-      isMainPage: true,
       titleText: '美好的一天又开始辣',
       titleColor: 'black',
+      showBack: false,
+      showHome: false,
     },
   },
 

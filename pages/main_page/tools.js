@@ -4,6 +4,13 @@ Page({
    * 页面的初始数据
    */
   data: {
+    headerParas: {
+      headerBg: 'white',
+      titleText: '功能列表',
+      titleColor: 'black',
+      showBack: false,
+      showHome: false,
+    },
   },
 
 	nothing () {},

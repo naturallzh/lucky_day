@@ -1,4 +1,5 @@
 //app.js
+const util = require('/utils/util.js');
 App({
   onLaunch: function (options) {
     // 展示本地存储能力
@@ -35,6 +36,9 @@ App({
 
     // 判断是否由分享进入小程序 1037是小程序打开小程序
     this.globalData.share = options.scene === 1007 || options.scene === 1008 || options.scene === 1037;
+
+    // 处理"中午吃什么"页面中的 餐品备选数组
+    util.processLunchData();
   },
   globalData: {
     share: false,

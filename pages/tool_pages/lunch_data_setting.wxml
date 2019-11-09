@@ -1,0 +1,40 @@
+<header headerParas="{{headerParas}}"></header>
+
+<view class="data-list-box">
+
+	<block wx:for="{{lunchData.defaultPool}}" wx:for-item="defaultPoolItem" wx:for-index="defaultPoolIdx" wx:key="wxkey">
+		<view class="data-item">
+			<view class="title {{defaultTitleStat[defaultPoolIdx]?'selected':'unselected'}}"
+			bindtap="changeDefaultTitleStat" data-idx="{{defaultPoolIdx}}">{{defaultPoolItem.className}}</view>
+			<view class="sub-box">
+				<block wx:for="{{defaultPoolItem.classArr}}" wx:for-item="subItem" wx:for-index="subIdx" wx:key="wxkey">
+					<view class="sub-item {{lunchData.defaultPoolSelect[defaultPoolIdx][subIdx]?'selected':'unselected'}}"
+					bindtap="changeDefaultSubStat" data-idx1="{{defaultPoolIdx}}" data-idx2="{{subIdx}}">{{subItem}}</view>
+				</block>
+			</view>
+		</view>
+	</block>
+
+	<view class="data-item">
+		<view class="title {{customTitleStat||lunchData.customPool.length==0?'selected':'unselected'}}" bindtap="changeCustomTitleStat">自定义</view>
+		<view class="sub-box">
+			<block wx:for="{{lunchData.customPool}}" wx:for-item="customItem" wx:for-index="customIdx" wx:key="wxkey" wx:if="{{lunchData.customPool.length>0}}">
+				<view class="sub-item {{lunchData.customPoolSelect[customIdx]?'selected':'unselected'}}"
+				style="color:{{isDeleting?'#fe4f48':''}}"
+				bindtap="changeCustomSubStat" data-idx="{{customIdx}}">{{customItem}}</view>
+			</block>
+			<view class="button-bar">
+				<view class="left-btn" style="opacity:{{lunchData.customPool.length<1&&!isDeleting?'0.4':'1'}}"
+				bindtap="{{isDeleting?'closeDeleting':'openDeleting'}}">{{isDeleting?'完成':'删减'}}</view>
+				<view class="right-btn" bindtap="openAdding" style="opacity:{{!isDeleting?'1':'0.4'}}">添加</view>
+			</view>
+		</view>
+	</view>
+
+</view>
+
+<view class="custom-add-mask" wx:if="{{isAdding}}" catchtouchmove="nothing" catchtap="nothing">
+	<icon type="clear" size="40" color="white" bindtap="closeAdding"/>
+	<input maxlength="8" bindinput='setNewFood' placeholder="请输入餐点名称" class="input-box" />
+	<icon type="success" size="40" color="#00b000" bindtap="addNewFood"/>
+</view>

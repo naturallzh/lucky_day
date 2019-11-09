@@ -1,4 +1,11 @@
 <header headerParas="{{headerParas}}"></header>
 
-<view class="display-board" style="filter: {{blurStr}}">{{dataList[idx]}}</view>
-<view class="btn" bindtap="getRes">ROLL一下</view>
+<view class="display-board" style="filter: {{blurStr}}" wx:if="{{dataList.length>0}}">{{dataList[idx]}}</view>
+<view class="btn" bindtap="getRes" wx:if="{{dataList.length>0}}">{{flag?'ROLL一下':'再ROLL一个'}}</view>
+
+<view class="no-data" wx:if="{{dataList.length<1}}">请在"设置"中至少选择一个备选项</view>
+
+<view class="setting-btn">
+	<text class="iconfont icon-shezhi" bindtap="gotoSetting">设置</text>
+
+</view>

@@ -42,6 +42,6 @@ App({
   },
   globalData: {
     share: false,
-    userInfo: null
+    userInfo: null,
   }
 })

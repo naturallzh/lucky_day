@@ -11,7 +11,6 @@ Page({
       titleText: '中午吃什么',
       titleColor: 'black',
     },
-    picUrl: app.globalData.picUrl,  // 图片地址
     showMask: false,
     isRequiring: false,
 
@@ -27,13 +26,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const dataList = ['手抓饼','金拱门','凉面','麻辣香锅','麻辣烫','咖喱饭','一碗好粥','拉面','重庆小面','黄鱼面',
-      '刀削面','酸辣粉','桂林米粉','炒河粉'];
+  },
+
+  initDataList () {
+    const lunchData = wx.getStorageSync('lunchData');
+    let dataList = [];
+    for (let i=0;i<lunchData.defaultPool.length;i++) {
+      for (let j=0;j<lunchData.defaultPool[i].classArr.length;j++) {
+        lunchData.defaultPoolSelect[i][j]?dataList.push(lunchData.defaultPool[i].classArr[j]):'';
+        //console.log(lunchData.defaultPool[i].classArr[j])
+      }
+    }
+    for (let i=0;i<lunchData.customPool.length;i++) {
+      lunchData.customPoolSelect[i]?dataList.push(lunchData.customPool[i]):'';
+    }
     this.setData({dataList: dataList});
-    this.data.timer = setInterval(()=>{
-      const idx = Math.floor(Math.random()*this.data.dataList.length);
-      this.setData({idx: idx});
-    },100);
   },
 
   getRes () {
@@ -56,6 +63,12 @@ Page({
     }
   },
 
+  gotoSetting () {
+    wx.navigateTo({
+      url: '/pages/tool_pages/lunch_data_setting'
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -67,7 +80,12 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.initDataList();
+    if (this.data.dataList.length<1 || !this.data.flag) {return;}
+    this.data.timer = setInterval(()=>{
+      const idx = Math.floor(Math.random()*this.data.dataList.length);
+      this.setData({idx: idx});
+    },100);
   },
 
   /**

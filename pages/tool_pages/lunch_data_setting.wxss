@@ -1,0 +1,81 @@
+page {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column; }
+
+.data-list-box {
+  width: 100%;
+  padding: 0 36rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column; }
+  .data-list-box .data-item {
+    margin-top: 18rpx;
+    display: flex;
+    flex-direction: column;
+    width: 100%; }
+    .data-list-box .data-item .title {
+      font-size: 32rpx;
+      font-weight: bold;
+      width: 100%;
+      margin-bottom: 18rpx; }
+    .data-list-box .data-item .sub-box {
+      width: 100%;
+      padding: 18rpx 18rpx 0 18rpx;
+      box-sizing: border-box;
+      display: flex;
+      border-radius: 12rpx;
+      background: #ccc;
+      flex-wrap: wrap; }
+      .data-list-box .data-item .sub-box .sub-item {
+        font-size: 28rpx;
+        margin: 0 18rpx 18rpx 18rpx; }
+      .data-list-box .data-item .sub-box .button-bar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        bottom: 0;
+        left: 0;
+        margin: 18rpx 0; }
+        .data-list-box .data-item .sub-box .button-bar .left-btn, .data-list-box .data-item .sub-box .button-bar .right-btn {
+          width: 30%;
+          text-align: center;
+          height: 60rpx;
+          font-size: 30rpx;
+          line-height: 60rpx;
+          border-radius: 12rpx;
+          color: white;
+          background: #fe4f48; }
+        .data-list-box .data-item .sub-box .button-bar .right-btn {
+          background: #00b000;
+          border-radius: 12rpx; }
+
+.selected {
+  text-decoration: none;
+  color: #0f0f0f; }
+
+.unselected {
+  text-decoration: line-through;
+  color: #efefef; }
+
+.custom-add-mask {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .custom-add-mask .input-box {
+    margin: 0 60rpx;
+    border-radius: 12rpx;
+    background: #efefef;
+    width: 260rpx;
+    height: 30rpx;
+    font-size: 30rpx;
+    padding: 18rpx; }

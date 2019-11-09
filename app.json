@@ -1,10 +1,11 @@
 {
   "pages": [
     "pages/main_page/front_page",
+    "pages/tool_pages/lunch_data_setting",
+    "pages/tool_pages/lunch",
     "pages/main_page/tools",
     "pages/main_page/personal_page",
     "pages/logs/logs",
-    "pages/tool_pages/lunch",
     "pages/index_old/index"
   ],
   "usingComponents": {

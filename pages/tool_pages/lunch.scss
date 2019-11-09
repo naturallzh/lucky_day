@@ -25,3 +25,20 @@ page {
   border-radius: 20rpx;
   box-shadow: 6rpx 6rpx gray;
 }
+
+.no-data {
+  font-size: 40rpx;
+  margin-bottom: 200rpx;
+}
+
+.setting-btn {
+  margin-top: 100rpx;
+  padding: 0 18rpx;
+  background: #ddd;
+  height: 60rpx;
+  font-size: 46rpx;
+  border-radius: 30rpx;
+  color: #fefefe;
+  display: flex;
+  align-items: center;
+}

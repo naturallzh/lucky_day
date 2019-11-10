@@ -35,6 +35,6 @@
 
 <view class="custom-add-mask" wx:if="{{isAdding}}" catchtouchmove="nothing" catchtap="nothing">
 	<icon type="clear" size="40" color="white" bindtap="closeAdding"/>
-	<input maxlength="8" bindinput='setNewFood' placeholder="请输入餐点名称" class="input-box" />
+	<input maxlength="80" bindinput='setNewFood' placeholder="请输入餐点名称" class="input-box" />
 	<icon type="success" size="40" color="#00b000" bindtap="addNewFood"/>
 </view>

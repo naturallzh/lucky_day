@@ -139,18 +139,43 @@ Page({
 
   addNewFood () {
     if (this.data.newFood==='') {return;}
-    const lunchData = this.data.lunchData;
-    lunchData.customPool.push(this.data.newFood);
-    lunchData.customPoolSelect.push(true);
+    if (this.data.isRequiring) {return}
+    this.setData({isRequiring: true});
+    const _this = this;
+    wx.cloud.callFunction({
+      // 云函数名称
+      name: 'msgCheck',
+      // 传给云函数的参数
+      data: {
+        content: _this.data.newFood
+      },
+      success (res) {
+        // console.log(res)
+        const lunchData = _this.data.lunchData;
+        lunchData.customPool.push(_this.data.newFood);
+        lunchData.customPoolSelect.push(true);
 
-    this.setData({
-      lunchData: lunchData,
-      newFood: '',
-    });
+        _this.setData({
+          lunchData: lunchData,
+          newFood: '',
+        });
 
-    this.processCustomTitleStat();
-    this.updateData();
-    this.closeAdding();
+        _this.processCustomTitleStat();
+        _this.updateData();
+        _this.closeAdding();
+      },
+      fail (res) {
+        // console.log(res)
+        wx.showToast({
+          title: '名称中包含不合适的内容 请更换',
+          icon: 'none',
+          duration: 2000
+        });
+      },
+      complete () {
+        _this.setData({isRequiring: false});
+      }
+    })
   },
 
   /**
@@ -170,6 +195,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    wx.cloud.init();
+
     this.setData({lunchData: wx.getStorageSync('lunchData')});
     this.processDefaultTitleStat();
     this.processCustomTitleStat();

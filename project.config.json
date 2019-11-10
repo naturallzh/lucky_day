@@ -13,7 +13,7 @@
 		"coverView": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.9.1",
+	"libVersion": "2.9.2",
 	"appid": "wxc698d82ad1fa343e",
 	"projectname": "lucky_day",
 	"debugOptions": {
@@ -22,6 +22,7 @@
 	"isGameTourist": false,
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
+	"cloudfunctionRoot": "cloudfunction/",
 	"condition": {
 		"search": {
 			"current": -1,

@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/tool_pages/phone_state",
     "pages/main_page/front_page",
     "pages/tool_pages/lunch_data_setting",
     "pages/tool_pages/lunch",

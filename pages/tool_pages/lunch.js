@@ -80,8 +80,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    this.setData({flag: true,blurStr: 'blur(12rpx)',});
     this.initDataList();
-    if (this.data.dataList.length<1 || !this.data.flag) {return;}
     this.data.timer = setInterval(()=>{
       const idx = Math.floor(Math.random()*this.data.dataList.length);
       this.setData({idx: idx});

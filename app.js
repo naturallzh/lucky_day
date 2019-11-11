@@ -43,5 +43,6 @@ App({
   globalData: {
     share: false,
     userInfo: null,
+    headerHeight: wx.getMenuButtonBoundingClientRect().bottom + 8,
   }
 })

@@ -8,7 +8,7 @@ Component({
   },
   data: {
     showGoBack: app.globalData.share && getCurrentPages().length > 1,  // 获取是否是通过分享进入的小程序
-    height: wx.getMenuButtonBoundingClientRect().bottom + 8,
+    height: app.globalData.headerHeight,
     buttonStyle: -1,     // 左上角按钮的显示模式 默认-1不显示胶囊按钮; 0只有回到主页; 1两个都有; 2只有回到上一页
   },
   attached: function () {

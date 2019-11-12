@@ -7,13 +7,16 @@ Page({
    */
   data: {
     headerParas: {
-      headerBg: 'white',
+      headerBg: 'black',
       titleText: '空间状态',
-      titleColor: 'black',
+      titleColor: 'white',
     },
     showMask: false,
     isRequiring: false,
 
+    x: 0,
+    y: 0,
+    test: '',
   },
 
   /**
@@ -26,24 +29,16 @@ Page({
     //     console.log(res);
     //   }
     // )
+    const _this = this;
     wx.startDeviceMotionListening();
     wx.onDeviceMotionChange(
       function (res) {
-        console.log(res);
+        _this.setData({
+          x: res.beta.toFixed(2),
+          y: res.gamma.toFixed(2),
+        });
       }
     );
-    // wx.startGyroscope();
-    // wx.onGyroscopeChange(
-    //   function (res) {
-    //     console.log(res);
-    //   }
-    // )
-    // wx.startAccelerometer();
-    // wx.onAccelerometerChange(
-    //   function (res) {
-    //     console.log(res);
-    //   }
-    // )
   },
 
   /**

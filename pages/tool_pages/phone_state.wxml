@@ -1,1 +1,7 @@
 <header headerParas="{{headerParas}}"></header>
+
+<view class="hori-box">
+  <view style="color:white">{{x}}</view>
+  <view style="color:white">{{y}}</view>
+  <view style="color:white">{{test}}</view>
+</view>

@@ -23,22 +23,24 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // wx.startCompass();
-    // wx.onCompassChange(
-    //   function (res) {
-    //     console.log(res);
-    //   }
-    // )
     const _this = this;
-    wx.startDeviceMotionListening();
-    wx.onDeviceMotionChange(
+
+    wx.startCompass();
+    wx.onCompassChange(
       function (res) {
-        _this.setData({
-          x: res.beta.toFixed(2),
-          y: res.gamma.toFixed(2),
-        });
+        console.log(res);
       }
-    );
+    )
+
+    // wx.startDeviceMotionListening();
+    // wx.onDeviceMotionChange(
+    //   function (res) {
+    //     _this.setData({
+    //       x: res.beta.toFixed(2),
+    //       y: res.gamma.toFixed(2),
+    //     });
+    //   }
+    // );
   },
 
   /**

@@ -1,4 +1,16 @@
 <header headerParas="{{headerParas}}"></header>
 
-<view class="compass-box">
+<view class="line-1">
+  <view class="hori-box">
+    <view class="graph-box">
+      <view class="hori-line"></view>
+      <view class="vert-line"></view>
+      <view class="point"></view>
+    </view>
+    <view class="text-box">
+      <view class="text">{{horiA1}}</view>
+      <view class="text">{{horiA2}}</view>
+    </view>
+  </view>
+  <view class="hori-box-2"></view>
 </view>

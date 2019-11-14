@@ -14,33 +14,23 @@ Page({
     showMask: false,
     isRequiring: false,
 
-    x: 0,
-    y: 0,
-    test: '',
+    horiA1: 0,
+    horiA2: 0,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const _this = this;
 
-    wx.startCompass();
-    wx.onCompassChange(
-      function (res) {
-        console.log(res);
-      }
-    )
 
-    // wx.startDeviceMotionListening();
-    // wx.onDeviceMotionChange(
+    // wx.startCompass();
+    // wx.onCompassChange(
     //   function (res) {
-    //     _this.setData({
-    //       x: res.beta.toFixed(2),
-    //       y: res.gamma.toFixed(2),
-    //     });
+    //     console.log(res);
     //   }
-    // );
+    // )
+
   },
 
   /**
@@ -54,6 +44,37 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    const _this = this;
+
+    wx.startDeviceMotionListening();
+    wx.onDeviceMotionChange(
+      function (res) {
+        const PIF = 180 / Math.PI;
+        const a = 1 / Math.tan(res.beta / PIF), b = 1 / Math.tan(res.gamma / PIF);  // 计算两个倾角的cot值
+        const tanA1 = Math.abs(Math.sqrt(a*a + b*b) / a / b);
+        const tanA2 = Math.abs(b / a);
+        let horiA2 = (Math.atan(tanA2)*PIF);
+        switch (true) {
+          case res.beta > 0 && res.gamma > 0:
+            horiA2 = 360 - horiA2;
+            break;
+          case res.beta > 0 && res.gamma < 0:
+            horiA2 = 180 + horiA2;
+            break;
+          case res.beta < 0 && res.gamma > 0:
+            // horiA2 = horiA2;
+            break;
+          case res.beta < 0 && res.gamma < 0:
+            horiA2 = 180 - horiA2;
+            break;
+        }
+        _this.setData({
+          horiA1: (Math.atan(tanA1)*PIF).toFixed(1),
+          horiA2: horiA2.toFixed(1),
+        });
+      }
+    );
+
   },
 
   /**

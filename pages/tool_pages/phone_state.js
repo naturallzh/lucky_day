@@ -14,8 +14,12 @@ Page({
     showMask: false,
     isRequiring: false,
 
-    horiA1: 0,
-    horiA2: 0,
+    horiData: {
+      horiA1: 0,
+      horiA2: 0,
+      pointL: '134',
+      pointT: '134',
+    },
   },
 
   /**
@@ -46,9 +50,10 @@ Page({
   onShow: function () {
     const _this = this;
 
-    wx.startDeviceMotionListening();
+    wx.startDeviceMotionListening({interval: 'ui'});
     wx.onDeviceMotionChange(
       function (res) {
+        let horiData = {};
         const PIF = 180 / Math.PI;
         const a = 1 / Math.tan(res.beta / PIF), b = 1 / Math.tan(res.gamma / PIF);  // 计算两个倾角的cot值
         const tanA1 = Math.abs(Math.sqrt(a*a + b*b) / a / b);
@@ -56,21 +61,27 @@ Page({
         let horiA2 = (Math.atan(tanA2)*PIF);
         switch (true) {
           case res.beta > 0 && res.gamma > 0:
-            horiA2 = 360 - horiA2;
-            break;
-          case res.beta > 0 && res.gamma < 0:
-            horiA2 = 180 + horiA2;
-            break;
-          case res.beta < 0 && res.gamma > 0:
             // horiA2 = horiA2;
             break;
-          case res.beta < 0 && res.gamma < 0:
+          case res.beta > 0 && res.gamma < 0:
             horiA2 = 180 - horiA2;
             break;
+          case res.beta < 0 && res.gamma > 0:
+            horiA2 = 360 - horiA2;
+            break;
+          case res.beta < 0 && res.gamma < 0:
+            horiA2 = 180 + horiA2;
+            break;
         }
-        _this.setData({
+        const len = Math.atan(tanA1)*PIF>10?10:Math.atan(tanA1)*PIF;
+        horiData = {
           horiA1: (Math.atan(tanA1)*PIF).toFixed(1),
           horiA2: horiA2.toFixed(1),
+          pointL: 134 + Math.cos(horiA2 / PIF) * len / 10 * 134,
+          pointT: 134 + Math.sin(horiA2 / PIF) * len / 10 * 134,
+        };
+        _this.setData({
+          horiData: horiData,
         });
       }
     );
@@ -81,6 +92,8 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
+    wx.offDeviceMotionChange();
+    wx.stopDeviceMotionListening();
   },
 
   /**

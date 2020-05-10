@@ -13,7 +13,7 @@
 		"coverView": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.10.4",
+	"libVersion": "2.9.3",
 	"appid": "wxc698d82ad1fa343e",
 	"projectname": "lucky_day",
 	"debugOptions": {

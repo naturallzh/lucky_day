@@ -45,10 +45,9 @@ page {
 .line-1 .hori-box .graph-box .point {
   width: 22rpx;
   height: 22rpx;
+  border-radius: 50%;
   background: red;
   position: absolute;
-  left: 134rpx;
-  top: 134rpx;
 }
 .line-1 .hori-box .text-box {
   width: 100%;

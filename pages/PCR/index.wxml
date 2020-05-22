@@ -1,0 +1,80 @@
+<header headerParas="{{headerParas}}"></header>
+
+<view class="loadingMask" wx:if="{{loadingMask}}">
+	<view class="circle-image-1"></view>
+	<view class="circle-image-2"></view>
+	<view style="font-size: 200%;margin-bottom: 20px;position: relative">
+		载入中<text class="dot-1">.</text><text class="dot-2">.</text><text class="dot-3">.</text>
+	</view>
+	<text style="position: relative">初次载入可能较慢</text>
+	<text style="position: relative">请耐心等待</text>
+</view>
+
+<view class="calc-box">
+	<view class="title">经验计算器</view>
+
+	<input bindinput='inputCurLvl' type="number" placeholder="当前等级" class="input-box" />
+	<input bindinput='inputCurExp' type="number" placeholder="当前经验" class="input-box" />
+	<input bindinput='inputTarLvl' type="number" placeholder="目标等级" class="input-box" style="margin-bottom: 18rpx" />
+	<view class="flex-align-center">
+		<text>需要经验</text>
+		<text class="res-val">{{expRequire[0]}}</text>
+	</view>
+	<view class="flex-align-center">
+		<text>升级回体</text>
+		<text class="res-val">{{expRequire[1]}}</text>
+		<checkbox-group bindchange="shiftWipeMaxLvlUpSpirit" v-show="calcExpRequire[0]!=='--'" class="flex-align-center">
+			<checkbox checked="{{expCalcParas.wipeMaxLvlUpSpirit}}" class="check-box" />
+			<text>不算末次回体<text class="res-val">{{playerLvlData[expCalcParas.tarLvl].spirit}}</text>点</text>
+		</checkbox-group>
+	</view>
+
+	<view class="flex-align-center">
+		<text style="margin-right: 5px">日回：240</text>
+		<text style="margin-right: 5px">日常体力：{{spiritGetParas.dailyQuestSpiritDouble?400:200}} </text>
+		<checkbox-group bindchange="shiftDailyQuestSpiritDouble" class="flex-align-center"><checkbox class="check-box" />双倍</checkbox-group>
+	</view>
+	<view class="flex-align-center">
+		<text style="margin-right: 5px">点赞：10</text>
+		<text style="margin-right: 5px">日常经验：{{spiritGetParas.dailyQuestExpDouble?700:350}} </text>
+		<checkbox-group bindchange="shiftDailyQuestExpDouble" class="flex-align-center"><checkbox class="check-box" />双倍</checkbox-group>
+	</view>
+
+	<view>宿舍：10级点心桌168 3个食物144</view>
+	<view style="display:none">
+		<text>宿舍：</text>
+		<select v-model="spiritGetParas.tableLvl">
+			<option :value="tableData.lvl" v-for="tableData in guildHomeData.spiritTable">{{tableData.lvl}}级点心桌{{tableData.spirit}}</option>
+		</select>
+		<select v-model="spiritGetParas.FoodNum">
+			<option :value="foodData.num" v-for="foodData in guildHomeData.dungeonFood">{{foodData.num}}个食物{{foodData.spirit}}</option>
+		</select>
+	</view>
+
+	<input bindinput='inputStoneNum' type="number" placeholder="碎石管数" class="input-box" style="margin-bottom: 18rpx" />
+	<view style="margin-bottom: 10rpx">
+		<text>日产体力 </text>
+		<text class="res-val">{{spiritGet}}</text>
+		<text>预估需要<text class="res-val">{{predictLvlDays}}</text>天</text>
+	</view>
+</view>
+
+<view class="calc-box">
+	<view class="title">合刀计算器</view>
+
+	<input bindinput='inputRemainHealth' type="number" placeholder="剩余血量" class="input-box" />
+	<input bindinput='inputDamageA' type="number" placeholder="刀一伤害" class="input-box" />
+	<input bindinput='inputDamageB' type="number" placeholder="刀一伤害" class="input-box" />
+	<view style="margin-top: 18rpx">
+		<text>一先二尾</text>
+		<text class="res-val">{{combineRes[0]}}</text>秒
+	</view>
+	<view style="margin-bottom: 10rpx">
+		<text>二先一尾</text>
+		<text class="res-val">{{combineRes[1]}}</text>秒
+	</view>
+</view>
+
+<view class="calc-box" style="margin-bottom:36rpx">
+	<view class="title">进度计算器</view>
+</view>

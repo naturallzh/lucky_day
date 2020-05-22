@@ -1,13 +1,11 @@
 {
   "pages": [
-    "pages/tool_pages/phone_state",
     "pages/main_page/front_page",
+    "pages/PCR/index",
+    "pages/tool_pages/phone_state",
     "pages/tool_pages/lunch_data_setting",
     "pages/tool_pages/lunch",
-    "pages/main_page/tools",
-    "pages/main_page/personal_page",
-    "pages/logs/logs",
-    "pages/index_old/index"
+    "pages/main_page/tools"
   ],
   "usingComponents": {
     "header": "/components/header/index"

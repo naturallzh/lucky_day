@@ -3,4 +3,26 @@ page {
     min-height: 100%;
     display: flex;
     flex-direction: column;
+    .ad-bar {
+        width:678rpx;
+        margin-left:36rpx;
+        height:300rpx;
+        background-repeat:no-repeat;
+        background-size:100% 100%;
+        margin-top:18rpx;
+        border-radius:12rpx;
+        position: relative;
+        .title {
+            position: absolute;
+            bottom: 20rpx;
+            left: 20rpx;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.6);
+            height: 44rpx;
+            line-height: 44rpx;
+            border-radius: 22rpx;
+            padding: 0 18rpx;
+            border: 1rpx black solid;
+        }
+    }
 }

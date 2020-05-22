@@ -10,3 +10,8 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
+.flex-align-center {
+	display: flex;
+	align-items: center
+}

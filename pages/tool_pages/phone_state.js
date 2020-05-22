@@ -8,7 +8,7 @@ Page({
   data: {
     headerParas: {
       headerBg: 'black',
-      titleText: '空间状态',
+      titleText: '空间状态 (开发中)',
       titleColor: 'white',
     },
     showMask: false,

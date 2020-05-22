@@ -20,10 +20,10 @@
 		<text>需要经验</text>
 		<text class="res-val">{{expRequire[0]}}</text>
 	</view>
-	<view class="flex-align-center">
+	<view class="flex-align-center" style="height:36rpx">
 		<text>升级回体</text>
 		<text class="res-val">{{expRequire[1]}}</text>
-		<checkbox-group bindchange="shiftWipeMaxLvlUpSpirit" v-show="calcExpRequire[0]!=='--'" class="flex-align-center">
+		<checkbox-group bindchange="shiftWipeMaxLvlUpSpirit" wx:if="{{expRequire[0]!=='--'}}" class="flex-align-center">
 			<checkbox checked="{{expCalcParas.wipeMaxLvlUpSpirit}}" class="check-box" />
 			<text>不算末次回体<text class="res-val">{{playerLvlData[expCalcParas.tarLvl].spirit}}</text>点</text>
 		</checkbox-group>

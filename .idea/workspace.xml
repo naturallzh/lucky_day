@@ -4,30 +4,7 @@
     <list default="true" id="c13cdf0f-ed84-401d-8f1d-733f604b7113" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/app.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index_old/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index_old/index.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index_old/index.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index_old/index.wxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index_old/index.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/logs/logs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/logs/logs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/logs/logs.wxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/logs/logs.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/main_page/front_page.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/main_page/front_page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/main_page/front_page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/main_page/front_page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/main_page/front_page.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/main_page/front_page.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/main_page/front_page.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/main_page/front_page.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/main_page/personal_page.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/main_page/personal_page.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/main_page/personal_page.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/main_page/personal_page.wxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/main_page/personal_page.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/main_page/tools.scss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/main_page/tools.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/main_page/tools.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/main_page/tools.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/main_page/tools.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/main_page/tools.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/tool_pages/phone_state.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/tool_pages/phone_state.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/PCR/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/PCR/index.wxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +52,7 @@
       <workItem from="1573610671341" duration="3172000" />
       <workItem from="1573711934207" duration="8951000" />
       <workItem from="1573795720130" duration="6995000" />
-      <workItem from="1590151113972" duration="19040000" />
+      <workItem from="1590151113972" duration="19516000" />
     </task>
     <servers />
   </component>

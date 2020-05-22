@@ -74,4 +74,16 @@ Page({
     })
   },
 
+  gotoPhoneState () {
+    wx.navigateTo({
+      url: '/pages/tool_pages/phone_state'
+    })
+  },
+
+  gotoPCR () {
+    wx.navigateTo({
+      url: '/pages/PCR/index'
+    })
+  },
+
 })

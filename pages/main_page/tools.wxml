@@ -5,11 +5,11 @@
     <image class="pic" src="../../images/icon_lunch.png"/>
     <view class="text">中午吃什么</view>
   </view>
-  <view class="tool-item" bindtap="gotoLunch">
+  <view class="tool-item" bindtap="gotoPCR">
     <image class="pic" src="../../images/icon_PCR.jpg"/>
     <view class="text">公主连接</view>
   </view>
-  <view class="tool-item" bindtap="gotoLunch">
+  <view class="tool-item" bindtap="gotoPhoneState">
     <image class="pic" src="../../images/icon_tools.png"/>
     <view class="text">水平仪</view>
   </view>

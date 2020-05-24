@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c13cdf0f-ed84-401d-8f1d-733f604b7113" name="Default Changelist" comment="" />
+    <list default="true" id="c13cdf0f-ed84-401d-8f1d-733f604b7113" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/banner_PCR.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/banner_PCR.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/banner_lunch.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/banner_lunch.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/banner_tools.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icon_tools.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/main_page/front_page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/main_page/front_page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/main_page/front_page.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/main_page/front_page.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/main_page/front_page.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/main_page/front_page.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/main_page/tools.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/main_page/tools.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/main_page/tools.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/main_page/tools.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/main_page/tools.scss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/main_page/tools.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/main_page/tools.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/main_page/tools.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/main_page/tools.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/main_page/tools.wxss" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +33,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../workspace_webstorm/YDJJ" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -49,6 +64,7 @@
       <workItem from="1573711934207" duration="8951000" />
       <workItem from="1573795720130" duration="6995000" />
       <workItem from="1590151113972" duration="19847000" />
+      <workItem from="1590195206446" duration="6738000" />
     </task>
     <servers />
   </component>
@@ -60,9 +76,13 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.wxml" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="662" y="252" width="596" height="536" key="find.popup" timestamp="1590163961269">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1590198844402">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="662" y="252" width="596" height="536" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1590163961269" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1590198844402" />
+    <state x="662" y="252" width="596" height="536" key="find.popup" timestamp="1590195260570">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="662" y="252" width="596" height="536" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1590195260570" />
   </component>
 </project>

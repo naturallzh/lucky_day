@@ -13,7 +13,7 @@ page {
     justify-content: space-between;
     flex-wrap: wrap;
     .tool-item {
-        margin-top: 18rpx;
+        margin-top: 36rpx;
         flex-shrink: 0;
         width: 180rpx;
         display: flex;
@@ -23,7 +23,7 @@ page {
             width: 160rpx;
             height: 160rpx;
             border-radius: 50%;
-            background: rgba(255, 200, 20, 0.6);
+            background: white;
         }
         .text {
             margin-top: 18rpx;
@@ -34,5 +34,34 @@ page {
         margin-top: 18rpx;
         flex-shrink: 0;
         width: 180rpx;
+    }
+}
+
+.wave-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    display: flex;
+    flex-direction: column;
+    .upper-block {
+        width: 100%;
+        flex-grow: 1;
+        background-image: linear-gradient(150deg, #dec08c, #f36037);
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        .wave-block {
+            filter: blur(5px 0);
+            width: 100%;
+            height: 200rpx;
+        }
+    }
+    .lower-block {
+        width: 100%;
+        height: 100rpx;
+        background: white;
     }
 }

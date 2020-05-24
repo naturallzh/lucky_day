@@ -1,11 +1,11 @@
 {
   "pages": [
     "pages/main_page/front_page",
+    "pages/main_page/tools",
     "pages/PCR/index",
     "pages/tool_pages/phone_state",
     "pages/tool_pages/lunch_data_setting",
-    "pages/tool_pages/lunch",
-    "pages/main_page/tools"
+    "pages/tool_pages/lunch"
   ],
   "usingComponents": {
     "header": "/components/header/index"

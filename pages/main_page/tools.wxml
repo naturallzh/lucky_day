@@ -10,7 +10,15 @@
     <view class="text">公主连接</view>
   </view>
   <view class="tool-item" bindtap="gotoPhoneState">
-    <image class="pic" src="../../images/icon_tools.png"/>
+    <image class="pic" src="../../images/icon_phone_state.png"/>
     <view class="text">水平仪</view>
   </view>
+</view>
+
+<view class="wave-container">
+	<view class="upper-block" style="{{upperBgStr}}">
+		<canvas class="wave-block" canvas-id="waveCanvas" disable-scroll="true"
+			bindtouchstart="nothing" bindtouchmove="nothing" bindtouchend="nothing"></canvas>
+	</view>
+	<view class="lower-block"></view>
 </view>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectTasksOptions">
-    <enabled-global>
-      <option value="SCSS to WXSS" />
-      <option value="SCSS to WXSS global -- no map -same dir Copy" />
-    </enabled-global>
-  </component>
-</project>

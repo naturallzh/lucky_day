@@ -134,12 +134,13 @@ Page({
     this.calcSpiritGet();
   },
   calcExpRequire: function () {
-    const {curLvl, curExp, tarLvl, wipeMaxLvlUpSpirit} = this.data.expCalcParas;
-    const flag1 = curLvl==parseInt(curLvl);
+    let {curLvl, curExp, tarLvl, wipeMaxLvlUpSpirit} = this.data.expCalcParas;
+    const flag1 = curLvl==parseInt(curLvl); flag1?curLvl=parseInt(curLvl):'';
     const flag2 = curExp==parseInt(curExp) || curExp=== "";
-    const flag3 = tarLvl==parseInt(tarLvl);
+    const flag3 = tarLvl==parseInt(tarLvl); flag3?tarLvl=parseInt(tarLvl):'';
     const flag4 = curLvl < tarLvl && this.data.playerLvlData[curLvl].exp > curExp;
-    const flag5 = curLvl >= 1 && tarLvl <= 85 && curExp >= 0;
+    const flag5 = curLvl >= 1 && tarLvl <= 100 && curExp >= 0;
+    // console.log(flag1, flag2, flag3, flag4, flag5);
     if (flag1 && flag2 && flag3 && flag4 && flag5) {
       const playerLvlData = this.data.playerLvlData;
       let expSum = -curExp;
@@ -211,9 +212,12 @@ Page({
     const flag4 = (parseInt(damageA) + parseInt(damageB)) > parseInt(remainHealth);
     const flag5 = parseInt(remainHealth)>0 && parseInt(damageA)>0 && parseInt(damageB)>0;
     if (flag1 && flag2 && flag3 && flag4 && flag5) {
-      const num1 = parseInt(damageB)/(parseInt(remainHealth)-parseInt(damageA));
-      const num2 = parseInt(damageA)/(parseInt(remainHealth)-parseInt(damageB));
-      res = [calcRefund(num1),calcRefund(num2)];
+      // const num1 = parseInt(damageB)/(parseInt(remainHealth)-parseInt(damageA));
+      // const num2 = parseInt(damageA)/(parseInt(remainHealth)-parseInt(damageB));
+      // res = [calcRefund(num1),calcRefund(num2)];
+      const num1 = Math.ceil(100 - ((parseInt(remainHealth)-parseInt(damageA)) / parseInt(damageB)) * 90);
+      const num2 = Math.ceil(100 - ((parseInt(remainHealth)-parseInt(damageB)) / parseInt(damageA)) * 90);
+      res = [num1, num2];
     }
     this.setData({combineRes: res});
 
@@ -369,7 +373,7 @@ Page({
       for (let i=65;i<76;i++) {
         dataArr[i] = {lvl: i, exp: 2655, spirit: dataArr[i-1].spirit+1};
       }
-      for (let i=76;i<86;i++) {
+      for (let i=76;i<101;i++) {
         dataArr[i] = {lvl: i, exp: 3540, spirit: dataArr[i-1].spirit+1};
       }
       _this.setData({playerLvlData: dataArr});
